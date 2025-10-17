@@ -42,11 +42,21 @@ for (let i = 0; i < favoriteFoods.length; i++) {
     // "Have you ever tried ____?"
     // "I always recommend ____ to friends."
     // "Trust me — ____ is delicious."
+function printFoodRecommendation(foodName) {
+  const f = String(foodName).toLowerCase().trim();
+  console.log(`Have you ever tried ${f}?`);
+  console.log(`I always recommend ${f} to friends.`);
+  console.log(`Trust me — ${f} is delicious.`);
+}
 
 
 
 
 // 4b. Call the function at least 3 times
+console.log("\nD) Food recommendations:");
+printFoodRecommendation("pizza");
+printFoodRecommendation("steak");
+printFoodRecommendation("macaroni and cheese");
 
 
 
