@@ -1,5 +1,16 @@
 console.log("Hello World!");
 // 1. Create an array called favoriteFoods with at least 6 foods you love.
+// my favorites
+const favoriteFoods = [
+  "steak",
+  "texas toast",
+  "pizza",
+  "wings",
+  "macaroni and cheese",
+  "brisket" 
+];
+
+console.log("A) favoriteFoods:", favoriteFoods, "count =", favoriteFoods.length);
 
 
 
