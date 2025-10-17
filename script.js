@@ -66,24 +66,74 @@ let friendFavorites = [
   ];
 
 // 5. Print out only foods that have an "a" in the name. For example, "Pizza" would not be included, but "Pasta" would be.
+console.log("\nE) Friends' foods that contain 'a' (but exclude 'Pizza'):");
+for (const food of friendFavorites) {
+  const lower = food.toLowerCase();
+  if (lower.includes("a") && lower !== "pizza") {
+    console.log(food);
+  }
+}
 
 
 
 // 6. Store the result in an array called foodsWithA. Print out the array.
+const foodsWithA = [];
+for (const food of friendFavorites) {
+  const lower = food.toLowerCase();
+  if (lower.includes("a") && lower !== "pizza") {
+    foodsWithA.push(food);
+  }
+}
+console.log("foodsWithA:", foodsWithA);
 
 
 
 // 7. Create a new array longFoodNames for foods with names longer than 6 characters.
+const longFoodNames = [];
+for (const food of friendFavorites) {
+  if (food.length > 6) {
+    longFoodNames.push(food);
+  }
+}
+console.log("longFoodNames (>6 chars):", longFoodNames);
 
 
 
 // 8. Create another array shortFoodNames for foods 6 characters or shorter.
+const shortFoodNames = [];
+for (const food of friendFavorites) {
+  if (food.length <= 6) {
+    shortFoodNames.push(food);
+  }
+}
+console.log("shortFoodNames (≤6 chars):", shortFoodNames);
 
 
 
 // 9. Print both arrays and compare:
 // "There are more long-named foods." OR "There are more short-named foods."
+console.log("\nCompare long vs short food names:");
+console.log("longFoodNames count:", longFoodNames.length);
+console.log("shortFoodNames count:", shortFoodNames.length);
+
+if (longFoodNames.length > shortFoodNames.length) {
+  console.log("There are more long-named foods.");
+} else if (longFoodNames.length < shortFoodNames.length) {
+  console.log("There are more short-named foods.");
+} else {
+  console.log("There are the same number of long and short-named foods.");
+}
+
 
 
 // 10. STRETCH: Find the longest food name and print:
 // "The longest food name in the list is ______ with ___ characters."
+let longest = "";
+for (const food of friendFavorites) {
+  if (food.length > longest.length) {
+    longest = food;
+  }
+}
+console.log(
+  `The longest food name in the list is "${longest}" with ${longest.length} characters.`
+);
