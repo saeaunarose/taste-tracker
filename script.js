@@ -15,6 +15,10 @@ console.log("A) favoriteFoods:", favoriteFoods, "count =", favoriteFoods.length)
 
 
 // 2. Loop through the list and print: "One of my favorite foods is ______."
+console.log("\nB) Favorite foods sentences:");
+for (let i = 0; i < favoriteFoods.length; i++) {
+  console.log(`One of my favorite foods is ${favoriteFoods[i]}.`);
+}
 
 
 
@@ -24,6 +28,11 @@ console.log("A) favoriteFoods:", favoriteFoods, "count =", favoriteFoods.length)
 // "My #1 favorite food is Ramen" (copy/paste for all items)
 // "My #2 favorite food is Sushi"
 // ...etc.
+console.log("\nC) Favorite foods ranked:");
+for (let i = 0; i < favoriteFoods.length; i++) {
+  const rank = i + 1;
+  console.log(`My #${rank} favorite food is ${favoriteFoods[i]}.`);
+}
 
 
 
